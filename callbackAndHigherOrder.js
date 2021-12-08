@@ -80,7 +80,11 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE 
-
+const contains = (arr, name, cb) =>{
+  if (arr.includes(name)){
+    cb(true)
+  } else{cb(false)}
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -105,7 +109,15 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+const unique = (arr, cb) =>{
+  for(let i = o; i <arr.length;i++){
+    for (let j = 1; j <arr.length;j++){
+      if (arr[i]=arr[j]){
+        arr.splice(j,1)
+      }
+    }
+  } cb(arr)
+}
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -114,7 +126,6 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
 
 
 ////////// PROBLEM 6 //////////
@@ -168,15 +179,18 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
-
-
+const getUserById = (arr, id, cb) +.
+{
+  const result = arr.filter(user => user.id === id)
+  cb(result[0])
+}
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 
